@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 # Program: Hello
 # Description: In this project students will write a very simple
 #              program using Python’s input and output methods. The program
