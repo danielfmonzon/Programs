@@ -19,7 +19,7 @@ def mulFunction(x, y):
     multiplication = x * y
     print(multiplication)
     
-def divFuntion(x, y):
+def divFunction(x, y):
     division = x / y
     print(division)
     
@@ -44,6 +44,6 @@ if __name__ == "__main__":
     elif operation == 3:
         mulFunction(inputOne, inputTwo)
     elif operation == 4:
-        divFuntion(inputOne, inputTwo)
+        divFunction(inputOne, inputTwo)
     else:
         print("Error: Invalid selection! Terminating program.")
