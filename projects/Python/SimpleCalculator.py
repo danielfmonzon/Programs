@@ -1,3 +1,12 @@
+# Program: One-Run Calculator
+# Description: A command line calculator that prompts for two numbers, displays a menu of four operations
+#              (Addition, Subtraction, Multiplication, Division), and performs the selected operation.
+#              It exits after displaying the result or an error message if an invalid choice is made.
+#              Aimed at practicing input/output, selection structures, and arithmetic operations in Python
+# Author: Daniel Monzon
+# Date: 03/12/2024
+# Version: 1.0
+
 def addFunction(x, y):
     addition = x + y
     print(addition)
