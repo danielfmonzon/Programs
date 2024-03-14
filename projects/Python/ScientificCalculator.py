@@ -44,7 +44,7 @@ if __name__ == "__main__":
     
     calc = Calculator()
     
-    while True:
+    while menu_selection != 0:
         calc.menu()
         menu_selection, input_one, input_two = calc.menu_input() # Unpack and assign menu selection and 
         # operands from user input returned by calc.menu_input()
@@ -57,5 +57,27 @@ if __name__ == "__main__":
             calc.mul_function(input_one, input_two)
         elif menu_selection == 4:
             calc.div_function(input_one, input_two)
+        elif menu_selection == 5:
+            pass
+        elif menu_selection == 6:
+            pass
+        elif menu_selection == 7:
+            pass
         else:
             print("Error: Invalid selection! Terminating program.")
+            
+    print("Thanks for using this calculator. Goodbye!")
+    
+"""
+Calculator Menu
+---------------
+0. Exit Program
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exponentiation
+6. Logarithm
+7. Display Average
+Enter Menu Selection: 1
+"""
