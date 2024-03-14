@@ -1,3 +1,16 @@
+# Program: Comprehensive Command Line Calculator
+# Description: A sophisticated command line calculator that offers a variety of arithmetic operations including 
+#              Addition, Subtraction, Multiplication, Division, Exponentiation, and Logarithm. Upon starting, 
+#              it displays a menu with these options along with additional features to clear the current result, 
+#              display statistical data (average of all calculations), and exit the program. It supports using 
+#              the result of the previous calculation as an operand by entering "RESULT". This enhancement aims 
+#              to bolster the understanding of looping, type conversion, and data persistence in Python.
+#              It continues to prompt for operations until exited by the user, displaying an error message 
+#              for invalid selections.
+# Author: Daniel Monzon
+# Date: 03/14/2024
+# Version: 1.0
+
 import math
 
 class Calculator:
