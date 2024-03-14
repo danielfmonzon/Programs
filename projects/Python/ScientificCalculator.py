@@ -1,8 +1,14 @@
+import math
+from tkinter.tix import InputOnly
+
 class Calculator:
     
     def __init__(self, menu_selection = 0):
         self.result = float(0.0)
         self.menu_selection = int(menu_selection)
+        self.sum_calculation = float(0.0)
+        self.num_calculation = int(0.0)
+        self.avg_calculation = float(0.0)
     
     def add_function(self, input_one, input_two):
         self.result = input_one + input_two
@@ -19,6 +25,21 @@ class Calculator:
             return
         self.result = input_one / input_two
         
+    def exp_function(self, input_one, input_two):
+        self.result = input_one ** input_two    
+        
+    def log_function(self, input_one, input_two):
+        try:
+            self.result = math.log(input_one, input_two)
+        except ValueError:
+            print(f"Error: Invalid selection! Input {input_one} causes Value Error.")
+            return None
+        
+    def avg_function(self, input_one, input_two):
+        #self.avg_calculation = self.sum_calculation / self.num_calculation
+        pass
+    
+        
     def menu(self):
         print(f"\nCurrent Result: {self.result}\n")
         
@@ -33,21 +54,31 @@ class Calculator:
         print("7. Display Average\n")
         
     def menu_input(self):
-        menu_selection = int(input("Enter Menu Selection: "))
-        print("")
+        try:
+            menu_selection = int(input("Enter Menu Selection: "))
+            print("")
+            return menu_selection
+        except ValueError:
+             print("") 
+             print("Error: Invalid selection! Terminating program.")
+             return False
+            
+    def get_operands(self):
         input_one = float(input("Enter first operand: "))
         input_two = float(input("Enter second operand: "))
-        return menu_selection, input_one, input_two
-    
+        return input_one, input_two
 
 if __name__ == "__main__":
     
     calc = Calculator()
+    loop = True
     
-    while menu_selection != 0:
+    while loop:
         calc.menu()
-        menu_selection, input_one, input_two = calc.menu_input() # Unpack and assign menu selection and 
+        menu_selection = calc.menu_input() # Unpack and assign menu selection and 
         # operands from user input returned by calc.menu_input()
+        if menu_selection in [1, 2, 3, 4, 5, 6]:
+            input_one, input_two = calc.get_operands()
 
         if menu_selection == 1:
             calc.add_function(input_one, input_two)
@@ -58,26 +89,16 @@ if __name__ == "__main__":
         elif menu_selection == 4:
             calc.div_function(input_one, input_two)
         elif menu_selection == 5:
-            pass
+            calc.exp_function(input_one, input_two)
         elif menu_selection == 6:
-            pass
+            calc.log_function(input_one, input_two)
         elif menu_selection == 7:
-            pass
+            pass # Display Average calc.avg_function(input_one, input_two)
+        elif menu_selection == 0:
+            print("Thanks for using this calculator. Goodbye!")
+            loop = False
         else:
             print("Error: Invalid selection! Terminating program.")
+            loop = False
             
-    print("Thanks for using this calculator. Goodbye!")
     
-"""
-Calculator Menu
----------------
-0. Exit Program
-1. Addition
-2. Subtraction
-3. Multiplication
-4. Division
-5. Exponentiation
-6. Logarithm
-7. Display Average
-Enter Menu Selection: 1
-"""
