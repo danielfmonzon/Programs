@@ -67,6 +67,7 @@ fib_a:
     mov x1, x10
     # Return from function
     br x30
+
 fib_function:
     # Allocate stack space
     sub sp, sp, 24
