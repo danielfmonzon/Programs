@@ -135,3 +135,37 @@
 # x o x o o
 # Player 1 won the game!
 
+
+# Required Methods
+# def print_board(board)
+# This will take in the 2D character list for the board and print the board.
+def print_board(board):
+    pass
+
+# def initialize_board(num_rows, num_cols)
+def initialize_board(num_rows, num_cols):
+    pass
+
+# This will take in the num_row and num_cols from user input and this will set each spot in the list to “-”. A 2D character
+# list with each spot set to be “-” will be returned.
+# def insert_chip(board, col, chip_type)
+def insert_chip(board, col, chip_type):
+    pass
+
+# This will take in the 2D character list for the board. This function places the token (‘x’ or ‘o’ denoted as ‘chip_type’) in the
+# column that the user has chosen. Will find the next available spot in that column if there are already tokens there. The row
+# that the token is placed in is returned.
+# : def check_if_winner(board, col, row, chip_type)
+def check_if_winner(board, col, row, chip_type):
+    pass
+
+# This will take in the 2D character list for the board. After a token is added, checks whether the token in this location, of
+# the specified chip type, creates four in a row. Will return True if someone won, and False otherwise.
+# Hint: Implement the methods in this order.
+# Submission
+# NOTE: Your output must match the example output *exactly*. If it does not, you will not receive full credit for
+# your submission!
+# Sample Output
+# What would you like the height of the board to be? 4
+# What would you like the length of the board to be? 5
+# - - - - -
